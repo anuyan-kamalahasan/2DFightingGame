@@ -6,7 +6,7 @@ import javax.sound.sampled.Clip;
 public class FightingMusic {
 	public static void main(String[] args) {
 
-		String storeMusic = "BattleTheme.wav"; //Music file used
+		String storeMusic = "resources/music/BattleTheme.wav"; //Music file used
 		MenuTheme(storeMusic);
 	}
 

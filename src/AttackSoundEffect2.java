@@ -3,9 +3,9 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-public class AttackSoundEffect1 {
+public class AttackSoundEffect2 {
  public static void main(String[] args) { 
-	String storeMusic = "Attack2Effect.wav"; //Sound effect
+	String storeMusic = "resources/soundeffect/Punch.wav"; //Sound effect file 
 	MenuTheme(storeMusic);
   }
    static void MenuTheme(String locateMusic) {
@@ -25,4 +25,3 @@ public class AttackSoundEffect1 {
      }
    }
 }
-

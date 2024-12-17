@@ -4,13 +4,13 @@
  import java.util.ArrayList;
  
  public class StartGame extends JFrame implements ActionListener {
-     ImageIcon start = new ImageIcon("Start.png"); //Images for the starting screen
+     ImageIcon start = new ImageIcon("resources/images/Start.png"); //Images for the starting screen
      Image img1 = start.getImage();
      Image newimg1 = img1.getScaledInstance(1300, 700, java.awt.Image.SCALE_SMOOTH);
      ImageIcon start1 = new ImageIcon(newimg1);
      JLabel startlbl = new JLabel(start1);
  
-     ImageIcon rules = new ImageIcon("s.PNG"); //Images for the rule
+     ImageIcon rules = new ImageIcon("resources/images/s.PNG"); //Images for the rule
      Image img2 = rules.getImage();
      Image newimg2 = img2.getScaledInstance(1250, 750, java.awt.Image.SCALE_SMOOTH);
      ImageIcon rules2 = new ImageIcon(newimg2);
@@ -27,7 +27,7 @@
          setSize(1265, 730);
          setLayout(null);
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         String storeMusic = "BattleTheme.wav";
+         String storeMusic = "resources/music/BattleTheme.wav";
          FightingMusic.MenuTheme(storeMusic);
          btnList = new ArrayList<JButton>(); // ArrayList for it to hold buttons
  

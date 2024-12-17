@@ -3,7 +3,7 @@
  import javax.swing.*;
  
  public class Winner extends JFrame {
-     ImageIcon gameOver = new ImageIcon("GameOver.jpg"); //Image for gameover
+     ImageIcon gameOver = new ImageIcon("resources/images/GameOver.jpg"); //Image for gameover
      Image img1 = gameOver.getImage();
      Image newimg1 = img1.getScaledInstance(1200, 700, java.awt.Image.SCALE_SMOOTH);
      ImageIcon gameOver1 = new ImageIcon(newimg1);

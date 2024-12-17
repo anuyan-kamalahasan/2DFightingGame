@@ -6,7 +6,7 @@
      static String pickChar1 = "";
      static String pickChar2 = "";
      IPanel pnl = new IPanel();
-     ImageIcon gojo = new ImageIcon("GojoStanceR.png");
+     ImageIcon gojo = new ImageIcon("resources/images/GojoStanceR.png");
      Image img1 = gojo.getImage();
      // scaled image to fit 200x200
      Image newimg1 = img1.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
@@ -14,7 +14,7 @@
      JLabel gojolbl = new JLabel(gojopic1);
  
      // images for itachi
-     ImageIcon itachi = new ImageIcon("ItachiStanceR .png");
+     ImageIcon itachi = new ImageIcon("resources/images/ItachiStanceR .png");
      Image img2 = itachi.getImage();
      // scaled image to fit 200x200
      Image newimg2 = img2.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
@@ -22,7 +22,7 @@
      JLabel itachilbl = new JLabel(itachipic1);
  
      // images for kakashi
-     ImageIcon kakashi = new ImageIcon("KakashiAttack1StartR.png");
+     ImageIcon kakashi = new ImageIcon("resources/images/KakashiAttack1StartR.png");
      Image img3 = kakashi.getImage();
      // scaled image to fit 200x200
      Image newimg3 = img3.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
@@ -30,7 +30,7 @@
      JLabel kakashilbl = new JLabel(kakashipic1);
  
      // images for zenzitsu
-     ImageIcon zenzitsu = new ImageIcon("ZenzitsuStanceR.png");
+     ImageIcon zenzitsu = new ImageIcon("resources/images/ZenzitsuStanceR.png");
      Image img4 = zenzitsu.getImage();
      // scaled image to fit 200x200
      Image newimg4 = img4.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
@@ -38,7 +38,7 @@
      JLabel zenzitsulbl = new JLabel(zenzitsupic1);
  
      // images for ichigo
-     ImageIcon ichigo = new ImageIcon("IchigoStanceR.png");
+     ImageIcon ichigo = new ImageIcon("resources/images/IchigoStanceR.png");
      Image img5 = ichigo.getImage();
      // scaled image to fit 200x200
      Image newimg5 = img5.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
@@ -46,14 +46,14 @@
      JLabel ichigolbl = new JLabel(ichigopic1);
  
      // images for sasuke
-     ImageIcon sasuke = new ImageIcon("SasukeStanceR .png");
+     ImageIcon sasuke = new ImageIcon("resources/images/SasukeStanceR .png");
      Image img6 = sasuke.getImage();
      // scaled image to fit 200x200
      Image newimg6 = img6.getScaledInstance(200, 200, java.awt.Image.SCALE_SMOOTH);
      ImageIcon sasukepic1 = new ImageIcon(newimg6);
      JLabel sasukelbl = new JLabel(sasukepic1);
  
-     ImageIcon menu = new ImageIcon("choose.png");
+     ImageIcon menu = new ImageIcon("resources/images/choose.png");
      Image img7 = menu.getImage();
      // scaled image to fit 200x200
      Image newimg7 = img7.getScaledInstance(250, 250, java.awt.Image.SCALE_SMOOTH);
@@ -303,7 +303,7 @@
          public IPanel() {
              super();
              Toolkit kit = Toolkit.getDefaultToolkit();
-             menu = kit.getImage("menu.jpg");
+             menu = kit.getImage("resources/images/menu.jpg");
          }
  
          public void paintComponent(Graphics comp) {

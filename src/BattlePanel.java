@@ -76,290 +76,290 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 		requestFocus(); // request focus on the panel to receive key events
 		kit = Toolkit.getDefaultToolkit();
 		// Set background image
-		background = kit.getImage("battle.jpg"); // Battlefield image
-		winner = kit.getImage("Winner.jpg"); // Player 1/2 Wins
-		health = kit.getImage("Healthbar.png"); // HealthBar Border
-		health2 = kit.getImage("Healthbar.png"); // HealthBar Border
-		player1 = kit.getImage("Player1.png").getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH); // Player Border
-		player2 = kit.getImage("Player2.png").getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH); // Player Border
+		background = kit.getImage("resources/images/battle.jpg"); // Battlefield image
+		winner = kit.getImage("resources/images/Winner.jpg"); // Player 1/2 Wins
+		health = kit.getImage("resources/images/Healthbar.png"); // HealthBar Border
+		health2 = kit.getImage("resources/images/Healthbar.png"); // HealthBar Border
+		player1 = kit.getImage("resources/images/Player1.png").getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH); // Player Border
+		player2 = kit.getImage("resources/images/Player2.png").getScaledInstance(100, 100, java.awt.Image.SCALE_SMOOTH); // Player Border
 		// Player 1 
 		if (pick == "SATORU GOJO") { // If user picked this character here are the images for him
-			left = kit.getImage("GojoWalkLL.png").getScaledInstance(imageWidth, imageHeight,
+			left = kit.getImage("resources/images/GojoWalkLL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance = kit.getImage("GojoStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			stance = kit.getImage("resources/images/GojoStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite = kit.getImage("GojoStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite = kit.getImage("resources/images/GojoStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp = kit.getImage("GojoStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp = kit.getImage("resources/images/GojoStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right = kit.getImage("GojoWalkLR.png").getScaledInstance(imageWidth, imageHeight,
+			right = kit.getImage("resources/images/GojoWalkLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump = kit.getImage("GojoJumpR.png").getScaledInstance(imageWidth, imageHeight,
+			jump = kit.getImage("resources/images/GojoJumpR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack1 = kit.getImage("GojoAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attack1 = kit.getImage("resources/images/GojoAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack2 = kit.getImage("GojoAttack2Power.png").getScaledInstance(imageWidth, imageHeight,
+			attack2 = kit.getImage("resources/images/GojoAttack2Power.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp1 = kit.getImage("GojoAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp1 = kit.getImage("resources/images/GojoAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp2 = kit.getImage("GojoAttack2Power.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp2 = kit.getImage("resources/images/GojoAttack2Power.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown = kit.getImage("GojoDownR.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown = kit.getImage("resources/images/GojoDownR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick == "ITACHI UCHIHA") { // If user picked this character here are the images for him
-			left = kit.getImage("ItachiRunLL.png").getScaledInstance(imageWidth, imageHeight,
+			left = kit.getImage("resources/images/ItachiRunLL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance = kit.getImage("ItachiStanceR .png").getScaledInstance(imageWidth, imageHeight,
+			stance = kit.getImage("resources/images/ItachiStanceR .png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite = kit.getImage("ItachiStanceR .png").getScaledInstance(imageWidth, imageHeight,
+			Sprite = kit.getImage("resources/images/ItachiStanceR .png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp = kit.getImage("ItachiStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp = kit.getImage("resources/images/ItachiStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right = kit.getImage("ItachiRunRR.png").getScaledInstance(imageWidth, imageHeight,
+			right = kit.getImage("resources/images/ItachiRunRR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump = kit.getImage("ItachiJumpAttackR.png").getScaledInstance(imageWidth, imageHeight,
+			jump = kit.getImage("resources/images/ItachiJumpAttackR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack1 = kit.getImage("ItachiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
+			attack1 = kit.getImage("resources/images/ItachiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack2 = kit.getImage("ItachiAttack2NextR.png").getScaledInstance(imageWidth, imageHeight,
+			attack2 = kit.getImage("resources/images/ItachiAttack2NextR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp1 = kit.getImage("ItachiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp1 = kit.getImage("resources/images/ItachiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp2 = kit.getImage("ItachiAttack2NextL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp2 = kit.getImage("resources/images/ItachiAttack2NextL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown = kit.getImage("ItachiDownR.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown = kit.getImage("resources/images/ItachiDownR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick == "KAKASHI HATAKE") { // If user picked this character here are the images for him
-			left = kit.getImage("KakashiRunRL.png").getScaledInstance(imageWidth, imageHeight,
+			left = kit.getImage("resources/images/KakashiRunRL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance = kit.getImage("KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
+			stance = kit.getImage("resources/images/KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite = kit.getImage("KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite = kit.getImage("resources/images/KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp = kit.getImage("KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp = kit.getImage("resources/images/KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right = kit.getImage("KakashiRunLR.png").getScaledInstance(imageWidth, imageHeight,
+			right = kit.getImage("resources/images/KakashiRunLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump = kit.getImage("KakashiJumpR.png").getScaledInstance(imageWidth, imageHeight,
+			jump = kit.getImage("resources/images/KakashiJumpR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack1 = kit.getImage("KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
+			attack1 = kit.getImage("resources/images/KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack2 = kit.getImage("KakashiAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attack2 = kit.getImage("resources/images/KakashiAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp1 = kit.getImage("KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp1 = kit.getImage("resources/images/KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp2 = kit.getImage("KakashiAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp2 = kit.getImage("resources/images/KakashiAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown = kit.getImage("KakashiDownR.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown = kit.getImage("resources/images/KakashiDownR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick == "ZENZITSU") { // If user picked this character here are the images for him
-			left = kit.getImage("ZenzitsuRunLL.png").getScaledInstance(imageWidth, imageHeight,
+			left = kit.getImage("resources/images/ZenzitsuRunLL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance = kit.getImage("ZenzitsuStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			stance = kit.getImage("resources/images/ZenzitsuStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite = kit.getImage("ZenzitsuStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite = kit.getImage("resources/images/ZenzitsuStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp = kit.getImage("ZenzitsuStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp = kit.getImage("resources/images/ZenzitsuStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right = kit.getImage("ZenzitsuRunLR.png").getScaledInstance(imageWidth, imageHeight,
+			right = kit.getImage("resources/images/ZenzitsuRunLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump = kit.getImage("ZenzitsuJumpR.png").getScaledInstance(imageWidth, imageHeight,
+			jump = kit.getImage("resources/images/ZenzitsuJumpR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack1 = kit.getImage("ZenzitsuAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attack1 = kit.getImage("resources/images/ZenzitsuAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack2 = kit.getImage("ZenzitsuAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
+			attack2 = kit.getImage("resources/images/ZenzitsuAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp1 = kit.getImage("ZenzitsuAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp1 = kit.getImage("resources/images/ZenzitsuAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp2 = kit.getImage("ZenzitsuAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp2 = kit.getImage("resources/images/ZenzitsuAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown = kit.getImage("ZenzitsuDownR.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown = kit.getImage("resources/images/ZenzitsuDownR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick == "SASUKE UCHIHA") { // If user picked this character here are the images for him
-			left = kit.getImage("SasukeRunRL.png").getScaledInstance(imageWidth, imageHeight,
+			left = kit.getImage("resources/images/SasukeRunRL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance = kit.getImage("SasukeStanceR .png").getScaledInstance(imageWidth, imageHeight,
+			stance = kit.getImage("resources/images/SasukeStanceR .png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite = kit.getImage("SasukeStanceR .png").getScaledInstance(imageWidth, imageHeight,
+			Sprite = kit.getImage("resources/images/SasukeStanceR .png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp = kit.getImage("SasukeStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp = kit.getImage("resources/images/SasukeStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right = kit.getImage("SasukeRunLR.png").getScaledInstance(imageWidth, imageHeight,
+			right = kit.getImage("resources/images/SasukeRunLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump = kit.getImage("SasukeJumpR.png").getScaledInstance(imageWidth, imageHeight,
+			jump = kit.getImage("resources/images/SasukeJumpR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack1 = kit.getImage("SasukeAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attack1 = kit.getImage("resources/images/SasukeAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack2 = kit.getImage("SasukeAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
+			attack2 = kit.getImage("resources/images/SasukeAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp2 = kit.getImage("SasukeAttack1PowerL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp2 = kit.getImage("resources/images/SasukeAttack1PowerL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp1 = kit.getImage("SasukeAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp1 = kit.getImage("resources/images/SasukeAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown = kit.getImage("SasukeDownR.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown = kit.getImage("resources/images/SasukeDownR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick == "ICHIGO KUROSAKI") { // If user picked this character here are the images for him
-			left = kit.getImage("IchigoRunLL.png").getScaledInstance(imageWidth, imageHeight,
+			left = kit.getImage("resources/images/IchigoRunLL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance = kit.getImage("IchigoStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			stance = kit.getImage("resources/images/IchigoStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite = kit.getImage("IchigoStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite = kit.getImage("resources/images/IchigoStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp = kit.getImage("IchigoStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp = kit.getImage("resources/images/IchigoStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right = kit.getImage("IchigoRunLR.png").getScaledInstance(imageWidth, imageHeight,
+			right = kit.getImage("resources/images/IchigoRunLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump = kit.getImage("IchigoJumpR.png").getScaledInstance(imageWidth, imageHeight,
+			jump = kit.getImage("resources/images/IchigoJumpR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack1 = kit.getImage("IchigoAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attack1 = kit.getImage("resources/images/IchigoAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack2 = kit.getImage("IchigoAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attack2 = kit.getImage("resources/images/IchigoAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp1 = kit.getImage("IchigoAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp1 = kit.getImage("resources/images/IchigoAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp2 = kit.getImage("IchigoAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp2 = kit.getImage("resources/images/IchigoAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown = kit.getImage("IchigoDownR.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown = kit.getImage("resources/images/IchigoDownR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		}
 
 		// Player 2
 		if (pick2 == "SATORU GOJO") { // If user picked this character here are the images for him
-			left2 = kit.getImage("GojoWalkLL.png").getScaledInstance(imageWidth, imageHeight,
+			left2 = kit.getImage("resources/images/GojoWalkLL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance2 = kit.getImage("GojoStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stance2 = kit.getImage("resources/images/GojoStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite2 = kit.getImage("GojoStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite2 = kit.getImage("resources/images/GojoStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp2 = kit.getImage("GojoStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp2 = kit.getImage("resources/images/GojoStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right2 = kit.getImage("GojoWalkLR.png").getScaledInstance(imageWidth, imageHeight,
+			right2 = kit.getImage("resources/images/GojoWalkLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump2 = kit.getImage("GojoJumpL.png").getScaledInstance(imageWidth, imageHeight,
+			jump2 = kit.getImage("resources/images/GojoJumpL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack3 = kit.getImage("GojoAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attack3 = kit.getImage("resources/images/GojoAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack4 = kit.getImage("GojoAttack2Power.png").getScaledInstance(imageWidth, imageHeight,
+			attack4 = kit.getImage("resources/images/GojoAttack2Power.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp3 = kit.getImage("GojoAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp3 = kit.getImage("resources/images/GojoAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp4 = kit.getImage("GojoAttack2Power.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp4 = kit.getImage("resources/images/GojoAttack2Power.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown2 = kit.getImage("GojoDownL.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown2 = kit.getImage("resources/images/GojoDownL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick2 == "ITACHI UCHIHA") { // If user picked this character here are the images for him
-			left2 = kit.getImage("ItachiRunLL.png").getScaledInstance(imageWidth, imageHeight,
+			left2 = kit.getImage("resources/images/ItachiRunLL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance2 = kit.getImage("ItachiStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stance2 = kit.getImage("resources/images/ItachiStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite2 = kit.getImage("ItachiStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite2 = kit.getImage("resources/images/ItachiStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp2 = kit.getImage("ItachiStanceR .png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp2 = kit.getImage("resources/images/ItachiStanceR .png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right2 = kit.getImage("ItachiRunRR.png").getScaledInstance(imageWidth, imageHeight,
+			right2 = kit.getImage("resources/images/ItachiRunRR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump2 = kit.getImage("ItachiJumpAttackL.png").getScaledInstance(imageWidth, imageHeight,
+			jump2 = kit.getImage("resources/images/ItachiJumpAttackL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack3 = kit.getImage("ItachiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
+			attack3 = kit.getImage("resources/images/ItachiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack4 = kit.getImage("ItachiAttack2NextL.png").getScaledInstance(imageWidth, imageHeight,
+			attack4 = kit.getImage("resources/images/ItachiAttack2NextL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp3 = kit.getImage("ItachiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp3 = kit.getImage("resources/images/ItachiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp4 = kit.getImage("ItachiAttack2NextR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp4 = kit.getImage("resources/images/ItachiAttack2NextR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown2 = kit.getImage("ItachiDownL.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown2 = kit.getImage("resources/images/ItachiDownL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick2 == "KAKASHI HATAKE") { // If user picked this character here are the images for him
-			left2 = kit.getImage("KakashiRunRL.png").getScaledInstance(imageWidth, imageHeight,
+			left2 = kit.getImage("resources/images/KakashiRunRL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance2 = kit.getImage("KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
+			stance2 = kit.getImage("resources/images/KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite2 = kit.getImage("KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite2 = kit.getImage("resources/images/KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp2 = kit.getImage("KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp2 = kit.getImage("resources/images/KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right2 = kit.getImage("KakashiRunLR.png").getScaledInstance(imageWidth, imageHeight,
+			right2 = kit.getImage("resources/images/KakashiRunLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump2 = kit.getImage("KakashiJumpL.png").getScaledInstance(imageWidth, imageHeight,
+			jump2 = kit.getImage("resources/images/KakashiJumpL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack3 = kit.getImage("KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
+			attack3 = kit.getImage("resources/images/KakashiAttack1StartL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack4 = kit.getImage("KakashiAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attack4 = kit.getImage("resources/images/KakashiAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp3 = kit.getImage("KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp3 = kit.getImage("resources/images/KakashiAttack1StartR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp4 = kit.getImage("KakashiAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp4 = kit.getImage("resources/images/KakashiAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown2 = kit.getImage("KakashiDownL.png").getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
+			knockdown2 = kit.getImage("resources/images/KakashiDownL.png").getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
 		} else if (pick2 == "ZENZITSU") { // If user picked this character here are the images for him
-			left2 = kit.getImage("ZenzitsuRunLL.png").getScaledInstance(imageWidth, imageHeight,
+			left2 = kit.getImage("resources/images/ZenzitsuRunLL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance2 = kit.getImage("ZenzitsuStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stance2 = kit.getImage("resources/images/ZenzitsuStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite2 = kit.getImage("ZenzitsuStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite2 = kit.getImage("resources/images/ZenzitsuStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp2 = kit.getImage("ZenzitsuStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp2 = kit.getImage("resources/images/ZenzitsuStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right2 = kit.getImage("ZenzitsuRunLR.png").getScaledInstance(imageWidth, imageHeight,
+			right2 = kit.getImage("resources/images/ZenzitsuRunLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump2 = kit.getImage("ZenzitsuJumpL.png").getScaledInstance(imageWidth, imageHeight,
+			jump2 = kit.getImage("resources/images/ZenzitsuJumpL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack3 = kit.getImage("ZenzitsuAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attack3 = kit.getImage("resources/images/ZenzitsuAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack4 = kit.getImage("ZenzitsuAttack1PowerL.png").getScaledInstance(imageWidth, imageHeight,
+			attack4 = kit.getImage("resources/images/ZenzitsuAttack1PowerL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp3 = kit.getImage("ZenzitsuAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp3 = kit.getImage("resources/images/ZenzitsuAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp4 = kit.getImage("ZenzitsuAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp4 = kit.getImage("resources/images/ZenzitsuAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown2 = kit.getImage("ZenzitsuDownL.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown2 = kit.getImage("resources/images/ZenzitsuDownL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick2 == "SASUKE UCHIHA") { // If user picked this character here are the images for him
-			left2 = kit.getImage("SasukeRunRL.png").getScaledInstance(imageWidth, imageHeight,
+			left2 = kit.getImage("resources/images/SasukeRunRL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance2 = kit.getImage("SasukeStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stance2 = kit.getImage("resources/images/SasukeStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite2 = kit.getImage("SasukeStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite2 = kit.getImage("resources/images/SasukeStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp2 = kit.getImage("SasukeStanceR .png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp2 = kit.getImage("resources/images/SasukeStanceR .png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right2 = kit.getImage("SasukeRunLR.png").getScaledInstance(imageWidth, imageHeight,
+			right2 = kit.getImage("resources/images/SasukeRunLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump2 = kit.getImage("SasukeJumpL.png").getScaledInstance(imageWidth, imageHeight,
+			jump2 = kit.getImage("resources/images/SasukeJumpL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack3 = kit.getImage("SasukeAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attack3 = kit.getImage("resources/images/SasukeAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack4 = kit.getImage("SasukeAttack1PowerL.png").getScaledInstance(imageWidth, imageHeight,
+			attack4 = kit.getImage("resources/images/SasukeAttack1PowerL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp3 = kit.getImage("SasukeAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp3 = kit.getImage("resources/images/SasukeAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp4 = kit.getImage("SasukeAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp4 = kit.getImage("resources/images/SasukeAttack1PowerR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown2 = kit.getImage("SasukeDownL.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown2 = kit.getImage("resources/images/SasukeDownL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		} else if (pick2 == "ICHIGO KUROSAKI") { // If user picked this character here are the images for him
-			left2 = kit.getImage("IchigoRunLL.png").getScaledInstance(imageWidth, imageHeight,
+			left2 = kit.getImage("resources/images/IchigoRunLL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stance2 = kit.getImage("IchigoStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			stance2 = kit.getImage("resources/images/IchigoStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			Sprite2 = kit.getImage("IchigoStanceL.png").getScaledInstance(imageWidth, imageHeight,
+			Sprite2 = kit.getImage("resources/images/IchigoStanceL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			stanceOpp2 = kit.getImage("IchigoStanceR.png").getScaledInstance(imageWidth, imageHeight,
+			stanceOpp2 = kit.getImage("resources/images/IchigoStanceR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			right2 = kit.getImage("IchigoRunLR.png").getScaledInstance(imageWidth, imageHeight,
+			right2 = kit.getImage("resources/images/IchigoRunLR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			jump2 = kit.getImage("IchigoJumpL.png").getScaledInstance(imageWidth, imageHeight,
+			jump2 = kit.getImage("resources/images/IchigoJumpL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack3 = kit.getImage("IchigoAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attack3 = kit.getImage("resources/images/IchigoAttack1EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attack4 = kit.getImage("IchigoAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
+			attack4 = kit.getImage("resources/images/IchigoAttack2EndL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp3 = kit.getImage("IchigoAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp3 = kit.getImage("resources/images/IchigoAttack1EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			attackOpp4 = kit.getImage("IchigoAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
+			attackOpp4 = kit.getImage("resources/images/IchigoAttack2EndR.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
-			knockdown2 = kit.getImage("IchigoDownL.png").getScaledInstance(imageWidth, imageHeight,
+			knockdown2 = kit.getImage("resources/images/IchigoDownL.png").getScaledInstance(imageWidth, imageHeight,
 					java.awt.Image.SCALE_SMOOTH);
 		}
 		runner = new Thread(this); // New thread named runner
@@ -487,7 +487,7 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 					if (time - attack >= attack10Cooldown) {
 						Sprite = attack1;
 						AttackSoundEffect1 music2 = new AttackSoundEffect1();
-						String storeMusic = "Punch.wav";
+						String storeMusic = "resources/soundeffect/Punch.wav";
 						AttackSoundEffect1.MenuTheme(storeMusic);
 						// Perform attack type 1 for player 1
 						checkCollisionPlayer1();
@@ -498,7 +498,7 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 					if (time4 - attackP3 >= attack10Cooldown) {
 						Sprite = attackOpp1;
 						AttackSoundEffect1 music2 = new AttackSoundEffect1();
-						String storeMusic = "Punch.wav";
+						String storeMusic = "resources/soundeffect/Punch.wav";
 						AttackSoundEffect1.MenuTheme(storeMusic);
 						// Perform attack type 1 for player 1
 						checkCollisionPlayer1();
@@ -518,7 +518,7 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 
 						}
 						AttackSoundEffect2 music = new AttackSoundEffect2();
-						String storeMusic = "Attack2Effect.wav";
+						String storeMusic = "resources/soundeffect/Attack2Effect.wav";
 						AttackSoundEffect2.MenuTheme(storeMusic);
 						// Perform attack type 2 for player 1
 						checkCollisionPlayer1Pt2();
@@ -536,7 +536,7 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 
 						}
 						AttackSoundEffect2 music = new AttackSoundEffect2();
-						String storeMusic = "Attack2Effect.wav";
+						String storeMusic = "resources/soundeffect/Attack2Effect.wav";
 						AttackSoundEffect2.MenuTheme(storeMusic);
 						// Perform attack type 2 for player 1
 						checkCollisionPlayer1Pt2();
@@ -580,7 +580,7 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 						// Perform attack type 1 for player 2
 						Sprite2 = attack3;
 						AttackSoundEffect1 music2 = new AttackSoundEffect1();
-						String storeMusic = "Punch.wav";
+						String storeMusic = "resources/soundeffect/Punch.wav";
 						AttackSoundEffect1.MenuTheme(storeMusic);
 						checkCollisionPlayer2();
 						attackP1 = time2; // Update the last attack time
@@ -591,7 +591,7 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 						// Perform attack type 1 for player 2
 						Sprite2 = attackOpp3;
 						AttackSoundEffect1 music2 = new AttackSoundEffect1();
-						String storeMusic = "Punch.wav";
+						String storeMusic = "resources/soundeffect/Punch.wav";
 						AttackSoundEffect1.MenuTheme(storeMusic);
 						checkCollisionPlayer2();
 						attackP5 = time6; // Update the last attack time
@@ -612,7 +612,7 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 						}
 
 						AttackSoundEffect2 music = new AttackSoundEffect2();
-						String storeMusic = "Attack2Effect.wav";
+						String storeMusic = "resources/soundeffect/Attack2Effect.wav";
 						AttackSoundEffect2.MenuTheme(storeMusic);
 						checkCollisionPlayer2Pt2();
 						attackP6 = time7; // Update the last attack time
@@ -628,7 +628,7 @@ public class BattlePanel extends JPanel implements Runnable, KeyListener {
 						}
 
 						AttackSoundEffect2 music = new AttackSoundEffect2();
-						String storeMusic = "Attack2Effect.wav";
+						String storeMusic = "resources/soundeffect/Attack2Effect.wav";
 						AttackSoundEffect2.MenuTheme(storeMusic);
 						checkCollisionPlayer2Pt2();
 						attackP6 = time8; // Update the last attack time
